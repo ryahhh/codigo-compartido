@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'poppins', sans-serif;
+    }
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    padding-top: 6rem;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: beige;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: blue;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: azure;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a:active {
+    color: blue;
+    border-bottom: 3px solid rgb(62, 62, 231);
+}
+
+@media(max-width:995px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        border-left: 3px solid rgb(62, 62, 231);
+        border-bottom: 3px solid rgb(62, 62, 231);
+        border-top-left-radius: 2rem;
+        padding: 1rem;
+        background-color: #161616;
+        border-top: 0,1rem solid rgba(0,0,0,1);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a:active {
+        padding: 1rem;
+        border-radius: 0,5rem;
+        border-bottom: 0,5rem solid rgb(3, 3, 3);
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 5ren 9% 5rem;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.home-content {
+    text-align: center;
+    margin-top: -8rem;
+}
+
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p {
+    font-size: 2rem;
+    line-height: 1.5;
+    color: rgb(232, 232, 236);
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+span {
+    color: rgb(159, 159, 240);
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img img {
+    border: none;
+    width: 32%;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid rgb(3, 3, 3);
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    transform: scaleX(1.1);
+}
+
+.social-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid rgb(62, 62, 231);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem;
+    transition: 0.3s ease;
+    color: rgb(62, 62, 231);
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: rgb(62, 62, 231);
+    box-shadow: 0 25px rgb(62, 62, 231);
+}
+
+.btn {
+     display: inline-block;
+     padding: 1rem 2.8rem;
+     background-color: black;
+     border-radius: 4rem;
+     font-size: 1.6rem;
+     color: rgb(62, 62, 231);
+     letter-spacing: 0.3rem;
+     font-weight: 600;
+     border: 2px solid rgb(62, 62, 231);
+     transition: 0.3s ease;
+     cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    background-color: rgb(62, 62, 231);
+    color: rgb(62, 62, 231);
+    box-shadow: 0 0 25px rgb(62, 62, 231);
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "softwere Developer";
+    color: rgb(26, 26, 204);
+    animation: words 20s infinite;
+}
+
+
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid rgb(13, 13, 14);
+    }
+}
+    
+@keyframes words {
+    0%, 20% {
+        content: "Web Developer";
+    }
+    21%, 40% {
+        content: "Developer";
+    }
+    41%, 60% {
+        content: "Web Designer";
+    }
+    61%, 80% {
+        content: "Freelancer";
+    }
+    81%, 100% {
+        content: "Script Writer";
+    }
+}
+
+@media (max-width: 1000px) {
+    .home-content h1 {
+        font-size: 4rem;
+    }
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width: 995px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3 {
+        font-size: 2.5rem;
+        margin-bottom: 700;
+        color: beige;
+    }
+    
+    .home-content h1 {
+        font-size: 5rem;
+    }
+    
+    .home-img img {
+        width: 300px;
+        border-radius: 30%;
+        box-shadow: 0 0 15px rgb(6, 6, 7);
+    }
+}
+
+
+
