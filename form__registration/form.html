@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form__registration</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  </head>
+  <body>
+    <form action="thanks.html">
+        <!-- title__form -->
+      <h2>Registration</h2>
+      <!-- form__name -->
+      <div class="form__name">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+      </div>
+      <!-- form__email -->
+      <div class="form__email">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+      </div>
+      <!-- form__password -->
+      <div class="form-group password">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+        <i id="pass-toggle-btn" class="fa-solid fa-eye"></i>
+      </div>
+      <!-- form__date -->
+      <div class="form-group date">
+        <label for="date">Birth Date</label>
+        <input type="date" id="date" placeholder="Select your date">
+      </div>
+      <!-- form__gender -->
+      <div class="form-group gender">
+        <label for="gender">Gender</label>
+        <select id="gender">
+          <option value="" selected disabled>Select your gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <!-- submit__btn -->
+      <div class="form-group submit-btn">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </body>
+</html>
